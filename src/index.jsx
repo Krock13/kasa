@@ -1,17 +1,19 @@
-import React, { StrictMode } from 'react'
-import ReactDOM from 'react-dom'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import Home from './pages/Home/home'
-import Lodging from './pages/Lodging/lodging'
-import About from './pages/About/about'
-import Footer from './components/Footer/footer'
-import Error from './components/Error/error'
-import GlobalStyle from './utils/style/GlobalStyle'
+import React, { StrictMode } from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home/home';
+import Lodging from './pages/Lodging/lodging';
+import About from './pages/About/about';
+import Header from './components/Header/header';
+import Footer from './components/Footer/footer';
+import Error from './components/Error/error';
 
-ReactDOM.render(
+import './utils/style/globalStyle.css';
+
+ReactDOM.createRoot(document.getElementById('root')).render(
     <StrictMode>
         <Router>
-            <GlobalStyle />
+            <Header />
             <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/lodging' element={<Lodging />} />
@@ -21,5 +23,4 @@ ReactDOM.render(
             <Footer />
         </Router>
     </StrictMode>,
-    document.getElementById('root'),
-)
+);

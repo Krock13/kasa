@@ -1,0 +1,48 @@
+.thumb {
+    left: 4.03%;
+    right: 68.55%;
+    top: 6.76%;
+    bottom: 52.23%;
+}
+
+.rectangle {
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(0, 0, 0, 0.5) 100%
+    );
+    border-radius: 10px;
+}
+
+.img {
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    
+    background: #FF6060;
+    border-radius: 10px;
+}
+
+.title {
+    left: 5.88%;
+    right: 5.88%;
+    top: 78.82%;
+    bottom: 5.88%;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 142.6%;
+
+    display: flex;
+    align-items: flex-end;
+
+    color: #ffffff;
+}

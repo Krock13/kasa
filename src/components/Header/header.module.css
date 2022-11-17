@@ -1,0 +1,40 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo {
+  scale: 115%;
+  margin-left: 0.8rem;
+  margin-top: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+.logo img {
+    margin-left: 0.1rem;
+    margin-right: 0.2rem;
+}
+
+.house {
+    margin-bottom: -0.2rem;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    gap: 14px;
+    margin-top: 1.5rem;
+}
+
+.list a {
+    text-decoration: none;
+    color: #ff6060;
+}
+
+.list a:hover {
+    text-decoration: underline;
+}
