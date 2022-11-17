@@ -1,0 +1,31 @@
+.footer {
+    bottom: 0;
+    width: 100%;
+    background: #000;
+    height: 234px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+  scale: 115%;
+  margin-bottom: 2rem;
+}
+
+.logo img {
+    margin-left: 0.1rem;
+    margin-right: 0.2rem;
+}
+
+.house {
+    margin-bottom: -0.2rem;
+}
+
+.footer span {
+    color: #fff;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
