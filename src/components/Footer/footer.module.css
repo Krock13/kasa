@@ -2,7 +2,7 @@
     bottom: 0;
     width: 100%;
     background: #000;
-    height: 234px;
+    height: 209px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,8 +10,7 @@
 }
 
 .logo {
-  scale: 115%;
-  margin-bottom: 2rem;
+  margin-bottom: 1.4rem;
 }
 
 .logo img {
@@ -25,7 +24,5 @@
 
 .footer span {
     color: #fff;
-    font-weight: lighter;
-    letter-spacing: 2px;
     font-size: 12px;
 }

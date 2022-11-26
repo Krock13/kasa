@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import styles from './lodging.module.css';
 import { useFetch } from '../../utils/hooks/hooks';
 import ImageSlider from '../../components/ImageSlider/imageSlider';
+import Tags from '../../components/Tag/tag';
 
 function Lodging() {
     const { data, isLoading, error } = useFetch(`../logements.json`);
@@ -22,10 +23,25 @@ function Lodging() {
             ) : (
                 <div>
                     {object.map((logement, index) => (
-                        <ImageSlider
-                            key={`${logement.id}-${index}`}
-                            slides={logement.pictures}
-                        />
+                        <div key={`${logement.id}-${index}`}>
+                            <ImageSlider slides={logement.pictures} />
+                            <h2 className={styles.title}>{logement.title}</h2>
+                            <h3 className={styles.location}>
+                                {logement.location}
+                            </h3>
+                            <div className={styles.lodgingTags}>
+                                {logement.tags.map((tags, index) => (
+                                    <div key={`${tags.id}-${index}`}>
+                                        <Tags tags={tags} />
+                                    </div>
+                                ))}
+                            </div>
+                            <div>rating</div>
+                            <div>host name</div>
+                            <div>host picture</div>
+                            <div>description</div>
+                            <div>equipements</div>
+                        </div>
                     ))}
                 </div>
             )}

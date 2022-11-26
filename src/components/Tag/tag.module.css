@@ -1,0 +1,15 @@
+.tagsContainers {
+    background-color: #ff6060;
+    border-radius: 7px;
+    color: #ffffff;
+    padding: 0px 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    min-width: 68px;
+    text-align: center;
+}
+
+.tag {
+    margin: 0;
+    font-size: 9px;
+}
