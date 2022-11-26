@@ -1,0 +1,21 @@
+.loaderWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.loader {
+    padding: 10px;
+    border: 6px solid #5843e4;
+    border-bottom-color: transparent;
+    border-radius: 22px;
+    animation: rotate 1s infinite linear;
+    height: 0;
+    width: 0;
+}
+
+.loadgingContainer {
+    width: 90%;
+    height: 100%;
+    border: 1px solid black;
+    margin: 0 5%;
+}
