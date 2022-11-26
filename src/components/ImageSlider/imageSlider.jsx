@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import styles from './imageSlider.module.css';
+import leftArrow from '../../assets/leftArrow.png';
+import rightArrow from '../../assets/rightArrow.png';
 
 const ImageSlider = ({ slides }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -17,19 +19,26 @@ const ImageSlider = ({ slides }) => {
         setCurrentIndex(slideIndex);
     };
 
-    const photo = slides[currentIndex]
+    const photo = slides[currentIndex];
 
     return (
         <div className={styles.imageSliderContainer}>
             <div>
-                <div onClick={goToPrevious} className={styles.leftArrow}>
-                    ❰
-                </div>
-                <div onClick={goToNext} className={styles.rightArrow}>
-                    ❱
-                </div>
+                <img
+                    src={leftArrow}
+                    alt='leftArrow'
+                    onClick={goToPrevious}
+                    className={styles.leftArrow}
+                ></img>
+                <img
+                    src={rightArrow}
+                    alt='rightArrow'
+                    onClick={goToNext}
+                    className={styles.rightArrow}
+                ></img>
             </div>
-            <img src={photo} alt='img' className={styles.pictures} ></img>
+            <img src={photo} alt='img' className={styles.pictures}></img>
+            <div className={styles.rectangle}></div>
             <div>
                 {slides.map((pictures, slideIndex) => {
                     return (
