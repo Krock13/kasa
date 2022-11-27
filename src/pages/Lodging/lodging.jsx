@@ -5,6 +5,7 @@ import ImageSlider from '../../components/ImageSlider/imageSlider';
 import Tags from '../../components/Tag/tag';
 import Rating from '../../components/Rating/rating';
 import Host from '../../components/Host/host';
+import Collapsible from '../../components/Collapse/collapse';
 
 function Lodging() {
     const { data, isLoading, error } = useFetch(`../logements.json`);
@@ -42,8 +43,16 @@ function Lodging() {
                                 <Rating rating={logement.rating} />
                                 <Host host={logement.host} />
                             </div>
-                            <div>description</div>
-                            <div>equipements</div>
+                            <div>
+                                <Collapsible
+                                    title='Description'
+                                    content={logement.description}
+                                />
+                                <Collapsible
+                                    title='Équipements'
+                                    content={logement.equipments}
+                                />
+                            </div>
                         </div>
                     ))}
                 </div>
