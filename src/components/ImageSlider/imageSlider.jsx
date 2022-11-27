@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from './imageSlider.module.css';
-import leftArrow from '../../assets/leftArrow.png';
-import rightArrow from '../../assets/rightArrow.png';
+import left_arrow from '../../assets/left_arrow.png';
+import right_arrow from '../../assets/right_arrow.png';
 
 const ImageSlider = ({ slides }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -25,13 +25,13 @@ const ImageSlider = ({ slides }) => {
         <div className={styles.imageSliderContainer}>
             <div>
                 <img
-                    src={leftArrow}
+                    src={left_arrow}
                     alt='leftArrow'
                     onClick={goToPrevious}
                     className={styles.leftArrow}
                 ></img>
                 <img
-                    src={rightArrow}
+                    src={right_arrow}
                     alt='rightArrow'
                     onClick={goToNext}
                     className={styles.rightArrow}

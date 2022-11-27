@@ -3,6 +3,8 @@ import styles from './lodging.module.css';
 import { useFetch } from '../../utils/hooks/hooks';
 import ImageSlider from '../../components/ImageSlider/imageSlider';
 import Tags from '../../components/Tag/tag';
+import Rating from '../../components/Rating/rating';
+import Host from '../../components/Host/host';
 
 function Lodging() {
     const { data, isLoading, error } = useFetch(`../logements.json`);
@@ -36,9 +38,10 @@ function Lodging() {
                                     </div>
                                 ))}
                             </div>
-                            <div>rating</div>
-                            <div>host name</div>
-                            <div>host picture</div>
+                            <div className={styles.ratingAndHost}>
+                                <Rating rating={logement.rating} />
+                                <Host host={logement.host} />
+                            </div>
                             <div>description</div>
                             <div>equipements</div>
                         </div>

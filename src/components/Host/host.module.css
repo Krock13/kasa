@@ -1,0 +1,30 @@
+.nameContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.name {
+    font-size: 12px;
+    margin-right: 10px;
+    color: #ff6060;
+}
+
+.name p {
+    text-align: end;
+}
+
+.firstName {
+    margin-bottom: -5px;
+}
+
+.lastName {
+    margin-top: -5px;
+}
+
+.picture {
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+    margin-top: 15px;
+}

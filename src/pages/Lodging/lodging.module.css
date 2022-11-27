@@ -16,21 +16,30 @@
 .loadgingContainer {
     width: 90%;
     height: 100%;
-    border: 1px solid black;
     margin: 0% 5%;
 }
 
 .title {
     color: #ff6060;
     font-size: 18px;
+    margin-top: -12px;
 }
 
 .location {
     color: #ff6060;
     font-size: 14px;
+    margin-top: -2px;
 }
 
 .lodgingTags {
     display: flex;
     flex-wrap: wrap;
+    margin-top: -10px;
+}
+
+.ratingAndHost {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: -10px;
 }
