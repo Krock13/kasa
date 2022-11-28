@@ -19,6 +19,7 @@
     position: absolute;
     bottom: 0;
     font-size: 18px;
+    font-weight: lighter;
     margin: 15px 20px;
     color: #fff;
     box-sizing: inherit;

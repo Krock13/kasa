@@ -5,13 +5,13 @@
 .banner {
     position: relative;
     width: 90%;
-    height: 7rem;
+    height: 111px;
     overflow: hidden;
     background: center center no-repeat;
     background-size: cover;
     border-radius: 10px;
     margin-top: -0.1rem;
-    margin-bottom: 1.4rem;
+    margin-bottom: 20px;
     margin-left: 5%;
 }
 
@@ -27,10 +27,10 @@
     position: absolute;
     font-size: 24px;
     line-height: 24px;
-    letter-spacing: 1.1px;
     margin-top: 2rem;
     margin-left: 1rem;
     color: #ffffff;
+    font-weight: lighter;
 }
 
 .thumb {
