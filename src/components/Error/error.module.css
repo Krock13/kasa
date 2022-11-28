@@ -1,0 +1,25 @@
+.errorContainer {
+    padding: 0 5%;
+    color: #ff6060;
+    text-align: center;
+    min-height: calc(100vh - 254px);
+}
+
+.titre {
+    font-size: 96px;
+    font-weight: 700;
+    margin-top: 168px;
+    margin-bottom: 11px;
+}
+
+.error {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 133px;
+}
+
+.redirection {
+    font-size: 14px;
+    font-weight: 500;
+    color: #ff6060;
+}

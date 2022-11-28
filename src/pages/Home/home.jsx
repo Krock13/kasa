@@ -12,7 +12,7 @@ function Home() {
     }
 
     return (
-        <div className={styles.gallery}>
+        <div className={styles.homeContainer}>
             <section className={styles.banner}>
                 <img src={banner} alt='paysage'></img>
                 <h1>
