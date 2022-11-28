@@ -4,25 +4,13 @@ import left_arrow from '../../assets/left_arrow.png';
 import right_arrow from '../../assets/right_arrow.png';
 
 const ImageSlider = ({ slides }) => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const goToPrevious = () => {
-        const isFirstSlide = currentIndex === 0;
-        const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
-        setCurrentIndex(newIndex);
-    };
-    const goToNext = () => {
-        const isLastSlide = currentIndex === slides.length - 1;
-        const newIndex = isLastSlide ? 0 : currentIndex + 1;
-        setCurrentIndex(newIndex);
-    };
-    const goToSlide = slideIndex => {
-        setCurrentIndex(slideIndex);
-    };
+    // Function to display slider navigation arrows unless there is only one image
+    function ShowArrows() {
+        if (slides.length <= 1) {
+            return null;
+        }
 
-    const photo = slides[currentIndex];
-
-    return (
-        <div className={styles.imageSliderContainer}>
+        return (
             <div>
                 <img
                     src={left_arrow}
@@ -37,6 +25,33 @@ const ImageSlider = ({ slides }) => {
                     className={styles.rightArrow}
                 ></img>
             </div>
+        );
+    }
+
+    // Using useState for the current image
+    const [currentIndex, setCurrentIndex] = useState(0);
+    // Previous image function
+    const goToPrevious = () => {
+        const isFirstSlide = currentIndex === 0;
+        const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
+        setCurrentIndex(newIndex);
+    };
+    // Next picture function
+    const goToNext = () => {
+        const isLastSlide = currentIndex === slides.length - 1;
+        const newIndex = isLastSlide ? 0 : currentIndex + 1;
+        setCurrentIndex(newIndex);
+    };
+    // Starting image => index[0]
+    const goToSlide = slideIndex => {
+        setCurrentIndex(slideIndex);
+    };
+
+    const photo = slides[currentIndex];
+
+    return (
+        <div className={styles.imageSliderContainer}>
+            <ShowArrows />
             <img src={photo} alt='img' className={styles.pictures}></img>
             <div className={styles.rectangle}></div>
             <div>
