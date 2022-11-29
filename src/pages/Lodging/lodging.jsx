@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import styles from './lodging.module.css';
-import { useFetch } from '../../utils/hooks/hooks';
+import { useFetch } from '../../utils/hooks/fetch';
 import ImageSlider from '../../components/ImageSlider/imageSlider';
 import Tags from '../../components/Tag/tag';
 import Rating from '../../components/Rating/rating';

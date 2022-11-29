@@ -27,6 +27,7 @@
     font-size: 0.78rem;
     gap: 1rem;
     margin-top: 18px;
+    padding-left: 0;
 }
 
 .list a {

@@ -7,12 +7,14 @@ import About from './pages/About/about';
 import Header from './components/Header/header';
 import Footer from './components/Footer/footer';
 import Error from './components/Error/error';
+import ScrollToTop from './utils/hooks/scrollToTop';
 
 import './utils/style/globalStyle.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <StrictMode>
         <Router>
+            <ScrollToTop />
             <Header />
             <Routes>
                 <Route path='/' element={<Home />} />
