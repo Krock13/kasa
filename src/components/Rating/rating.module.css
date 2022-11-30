@@ -5,5 +5,13 @@
 }
 
 .rating {
-    margin-right: 5px;
+    margin-right: -10px;
+    scale: 50%;
+}
+@media only screen and (min-width: 1440px) {
+    .rating {
+        margin-right: 10px;
+        scale: 100%;
+        margin-top: 12px;
+    }
 }

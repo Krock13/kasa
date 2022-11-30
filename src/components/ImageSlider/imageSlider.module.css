@@ -7,27 +7,48 @@
     overflow: hidden;
     background: #ff6060;
 }
+@media only screen and (min-width: 1440px) {
+    .imageSliderContainer {
+        width: 1240px;
+        height: 415px;
+    }
+}
 
-.leftArrow {
+.leftArrow,
+.rightArrow {
     position: absolute;
-    top: 50%;
+    top: 38%;
     transform: translate(0, -50%);
-    left: 6px;
     font-size: 45px;
     color: blue;
     z-index: 1;
     cursor: pointer;
+    scale: 25%;
+}
+@media only screen and (min-width: 1440px) {
+    .leftArrow,
+    .rightArrow {
+        scale: 100%;
+        top: 50%;
+    }
+}
+
+.leftArrow {
+    left: -12px;
+}
+@media only screen and (min-width: 1440px) {
+    .leftArrow {
+        left: 25px;
+    }
 }
 
 .rightArrow {
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-    right: 6px;
-    font-size: 45px;
-    color: blue;
-    z-index: 1;
-    cursor: pointer;
+    right: -12px;
+}
+@media only screen and (min-width: 1440px) {
+    .rightArrow {
+        right: 25px;
+    }
 }
 
 .pictures {

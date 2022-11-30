@@ -7,6 +7,12 @@
     overflow: hidden;
     background: #FF6060;
 }
+@media only screen and (min-width: 1440px) {
+    .card {
+        width: 340px;
+        height: 340px;
+    }
+}
 
 .card img {
     width: inherit;

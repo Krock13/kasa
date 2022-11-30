@@ -5,9 +5,9 @@ import vector_K from '../../assets/vector_K.png';
 import vector_S from '../../assets/vector_S.png';
 import vector_house from '../../assets/house.png';
 
-function Header() {
+export function Header() {
     return (
-        <div className={styles.header}>
+        <header className={styles.header}>
             <Link to={'/'} className={styles.logo}>
                 <img src={vector_K} alt='K'></img>
                 <img className={styles.house}src={vector_house} alt='A'></img>
@@ -17,15 +17,13 @@ function Header() {
             <nav>
                 <ul className={styles.list}>
                     <li>
-                        <Link to={'/'}>accueil</Link>
+                        <Link to={'/'}>Accueil</Link>
                     </li>
                     <li>
-                        <Link to={'/about'}>a propos</Link>
+                        <Link to={'/about'}>A Propos</Link>
                     </li>
                 </ul>
             </nav>
-        </div>
+        </header>
     );
 }
-
-export default Header;

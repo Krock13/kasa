@@ -2,7 +2,7 @@ import styles from './rating.module.css';
 import red_star from '../../assets/red_star.png';
 import grey_star from '../../assets/grey_star.png';
 
-const Rating = ({ rating }) => {
+export const Rating = ({ rating }) => {
     const stars = [1, 2, 3, 4, 5];
 
     return (
@@ -17,5 +17,3 @@ const Rating = ({ rating }) => {
         </div>
     );
 };
-
-export default Rating;

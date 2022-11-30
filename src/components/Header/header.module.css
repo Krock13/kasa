@@ -3,11 +3,26 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 5%;
+    padding-bottom: 18px;
+}
+@media only screen and (min-width: 1440px) {
+    .header {
+        max-width: 1240px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 4%;
+    }
 }
 
 .logo {
-  margin-left: 0;
-  margin-top: 0;
+    margin-left: 0;
+    margin-top: 0;
+}
+@media only screen and (min-width: 1440px) {
+    .logo {
+        scale: 140%;
+        margin-left: 28px;
+    }
 }
 
 .logo img {
@@ -24,10 +39,18 @@
     flex-direction: row;
     list-style-type: none;
     text-transform: uppercase;
-    font-size: 0.78rem;
+    font-size: 12px;
     gap: 1rem;
     margin-top: 18px;
     padding-left: 0;
+}
+@media only screen and (min-width: 1440px) {
+    .list {
+        font-size: 24px;
+        text-transform: none;
+        gap: 4rem;
+        margin-top: 8px;
+    }
 }
 
 .list a {

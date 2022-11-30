@@ -3,7 +3,7 @@ import styles from './imageSlider.module.css';
 import left_arrow from '../../assets/left_arrow.png';
 import right_arrow from '../../assets/right_arrow.png';
 
-const ImageSlider = ({ slides }) => {
+export const ImageSlider = ({ slides }) => {
     // Function to display slider navigation arrows unless there is only one image
     function ShowArrows() {
         if (slides.length <= 1) {
@@ -67,5 +67,3 @@ const ImageSlider = ({ slides }) => {
         </div>
     );
 };
-
-export default ImageSlider;

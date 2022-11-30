@@ -1,12 +1,12 @@
 import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home/home';
-import Lodging from './pages/Lodging/lodging';
-import About from './pages/About/about';
-import Header from './components/Header/header';
-import Footer from './components/Footer/footer';
-import Error from './components/Error/error';
+import { Home } from './pages/Home/home';
+import { Lodging } from './pages/Lodging/lodging';
+import { About } from './pages/About/about';
+import { Header } from './components/Header/header';
+import { Footer } from './components/Footer/footer';
+import { Error } from './components/Error/error';
 import ScrollToTop from './utils/hooks/scrollToTop';
 
 import './utils/style/globalStyle.css';

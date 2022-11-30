@@ -1,13 +1,13 @@
 import { useParams } from 'react-router-dom';
 import styles from './lodging.module.css';
 import { useFetch } from '../../utils/hooks/fetch';
-import ImageSlider from '../../components/ImageSlider/imageSlider';
-import Tags from '../../components/Tag/tag';
-import Rating from '../../components/Rating/rating';
-import Host from '../../components/Host/host';
-import Collapsible from '../../components/Collapse/collapse';
+import { ImageSlider } from '../../components/ImageSlider/imageSlider';
+import { Tags } from '../../components/Tag/tag';
+import { Rating } from '../../components/Rating/rating';
+import { Host } from '../../components/Host/host';
+import { Collapsible } from '../../components/Collapse/collapse';
 
-function Lodging() {
+export function Lodging() {
     const { data, isLoading, error } = useFetch(`../logements.json`);
     const { id } = useParams();
     const element = id => data?.find(element => element.id === id);
@@ -43,7 +43,7 @@ function Lodging() {
                                 <Rating rating={logement.rating} />
                                 <Host host={logement.host} />
                             </div>
-                            <div>
+                            <div className={styles.collapsideContainers}>
                                 <Collapsible
                                     title='Description'
                                     content={logement.description}
@@ -60,5 +60,3 @@ function Lodging() {
         </div>
     );
 }
-
-export default Lodging;

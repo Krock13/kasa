@@ -3,7 +3,7 @@ import styles from './collapse.module.css';
 import down_arrow from '../../assets/down_arrow.png';
 import up_arrow from '../../assets/up_arrow.png';
 
-const Collapsible = ({ title, content }) => {
+export const Collapsible = ({ title, content }) => {
     const [open, setOpen] = useState(false);
     const toggle = () => {
         setOpen(!open);
@@ -14,9 +14,9 @@ const Collapsible = ({ title, content }) => {
             <button onClick={toggle} className={styles.button}>
                 {title}
                 {open ? (
-                    <img src={up_arrow} alt='' />
+                    <img src={up_arrow} alt='' className={styles.arrow}/>
                 ) : (
-                    <img src={down_arrow} alt='' />
+                    <img src={down_arrow} alt='' className={styles.arrow}/>
                 )}
             </button>
             {open && (
@@ -37,5 +37,3 @@ const Collapsible = ({ title, content }) => {
         </div>
     );
 };
-
-export default Collapsible;

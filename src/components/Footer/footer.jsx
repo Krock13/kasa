@@ -4,7 +4,7 @@ import vector_K_white from '../../assets/vector_K_white.png';
 import vector_S_white from '../../assets/vector_S_white.png';
 import vector_house_white from '../../assets/house_white.png';
 
-function Footer() {
+export function Footer() {
     return (
         <div className={styles.footer}>
             <div className={styles.logo}>
@@ -17,5 +17,3 @@ function Footer() {
         </div>
     );
 }
-
-export default Footer;

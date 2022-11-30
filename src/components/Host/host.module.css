@@ -9,6 +9,11 @@
     margin-right: 10px;
     color: #ff6060;
 }
+@media only screen and (min-width: 1440px) {
+    .name {
+        font-size: 18px;
+    }
+}
 
 .name p {
     text-align: end;
@@ -16,6 +21,12 @@
 
 .firstName {
     margin-bottom: -5px;
+}
+@media only screen and (min-width: 1440px) {
+    .firstName {
+        margin-top: 22px;
+        margin-bottom: 10px;
+    }
 }
 
 .lastName {
@@ -27,4 +38,10 @@
     height: 32px;
     width: 32px;
     margin-top: 15px;
+}
+@media only screen and (min-width: 1440px) {
+    .picture {
+        height: 64px;
+        width: 64px;
+    }
 }

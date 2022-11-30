@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom';
 import styles from './error.module.css';
 
-function Error() {
+export function Error() {
     return (
         <div className={styles.errorContainer}>
             <h2 className={styles.titre}>404</h2>
 
             <p className={styles.error}>
-                Oups! La page que <br />
-                vous demandez n'existe pas.
+                <span>Oups! La page que </span>
+                <span>vous demandez n'existe pas.</span>
             </p>
 
             <Link to={`./`} className={styles.redirection}>
@@ -17,5 +17,3 @@ function Error() {
         </div>
     );
 }
-
-export default Error;

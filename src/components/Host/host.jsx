@@ -1,6 +1,6 @@
 import styles from './host.module.css';
 
-const Host = ({ host }) => {
+export const Host = ({ host }) => {
     const isSplited = host.name.split(' ');
     const [name, lastName] = isSplited;
 
@@ -15,5 +15,3 @@ const Host = ({ host }) => {
         </div>
     );
 };
-
-export default Host;

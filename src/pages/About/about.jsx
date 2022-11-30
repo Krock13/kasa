@@ -1,15 +1,15 @@
 import styles from './about.module.css';
 import banner from '../../assets/banner_about.png';
 import { aboutData } from './aboutData';
-import Collapsible from '../../components/Collapse/collapse';
+import { Collapsible } from '../../components/Collapse/collapse';
 
-function About() {
+export function About() {
     return (
         <div className={styles.aboutContainer}>
             <div className={styles.bannerContainer}>
                 <img src={banner} alt='' className={styles.banner}></img>
             </div>
-            <div>
+            <div className={styles.collapsibleContainer}>
                 {aboutData.map((data, index) => {
                     return (
                         <div key={index}>
@@ -36,5 +36,3 @@ function About() {
         </div>
     );
 }
-
-export default About;
