@@ -10,53 +10,39 @@ import { Collapsible } from '../../components/Collapse/collapse';
 export function Lodging() {
     const { data, isLoading, error } = useFetch(`../logements.json`);
     const { id } = useParams();
-    const element = id => data?.find(element => element.id === id);
-    const object = [element(id)];
+    const element = data?.find(element => element.id === id);
 
     if (error) {
         return <span>Oups il y a eu un problème</span>;
     }
 
-    return (
-        <div className={styles.loadgingContainer}>
-            {isLoading ? (
-                <div className={styles.loaderWrapper}>
-                    <div className={styles.loader} />
+    if (!isLoading) {
+        const {
+            pictures,
+            title,
+            location,
+            tags,
+            rating,
+            host,
+            description,
+            equipments,
+        } = element;
+
+        return (
+            <div className={styles.loadgingContainer}>
+                <ImageSlider slides={pictures} />
+                <h2 className={styles.title}>{title}</h2>
+                <h3 className={styles.location}>{location}</h3>
+                <Tags tags={tags} className={styles.lodgingTags} />
+                <div className={styles.ratingAndHost}>
+                    <Rating rating={rating} />
+                    <Host host={host} />
                 </div>
-            ) : (
-                <div>
-                    {object.map((logement, index) => (
-                        <div key={`${logement.id}-${index}`}>
-                            <ImageSlider slides={logement.pictures} />
-                            <h2 className={styles.title}>{logement.title}</h2>
-                            <h3 className={styles.location}>
-                                {logement.location}
-                            </h3>
-                            <div className={styles.lodgingTags}>
-                                {logement.tags.map((tags, index) => (
-                                    <div key={`${tags.id}-${index}`}>
-                                        <Tags tags={tags} />
-                                    </div>
-                                ))}
-                            </div>
-                            <div className={styles.ratingAndHost}>
-                                <Rating rating={logement.rating} />
-                                <Host host={logement.host} />
-                            </div>
-                            <div className={styles.collapsideContainers}>
-                                <Collapsible
-                                    title='Description'
-                                    content={logement.description}
-                                />
-                                <Collapsible
-                                    title='Équipements'
-                                    content={logement.equipments}
-                                />
-                            </div>
-                        </div>
-                    ))}
+                <div className={styles.collapsideContainers}>
+                    <Collapsible title='Description' content={description} />
+                    <Collapsible title='Équipements' content={equipments} />
                 </div>
-            )}
-        </div>
-    );
+            </div>
+        );
+    }
 }
