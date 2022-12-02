@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useFetch } from '../../utils/hooks/fetch';
-import { Card } from '../../components/Card/card';
+import { Card } from '../../components/Card/Card';
 import styles from './home.module.css';
 import banner from '../../assets/banner.png';
 

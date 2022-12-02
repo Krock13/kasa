@@ -1,7 +1,7 @@
 .homeContainer {
     background-color: #ffffff;
 }
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1240px) {
     .homeContainer {
         max-width: 1240px;
         margin-left: auto;
@@ -37,7 +37,7 @@
     transform: translate(-50%, -50%);
     filter: brightness(60%);
 }
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1240px) {
     .banner img {
         transform: translate(-50%, -15%);
     }
@@ -69,11 +69,6 @@
 
 .span1 {
     margin-top: 2rem;
-}
-@media only screen and (min-width: 1440px) {
-    .span1 {
-        margin-top: 2rem;
-    }
 }
 
 .span2 {
@@ -111,7 +106,7 @@
     }
 }
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1240px) {
     .cardCalc {
         margin-bottom: 30px;
     }

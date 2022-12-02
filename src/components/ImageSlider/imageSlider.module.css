@@ -7,7 +7,7 @@
     overflow: hidden;
     background: #ff6060;
 }
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1240px) {
     .imageSliderContainer {
         width: 1240px;
         height: 415px;
@@ -25,7 +25,7 @@
     cursor: pointer;
     scale: 25%;
 }
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1240px) {
     .leftArrow,
     .rightArrow {
         scale: 100%;
@@ -36,7 +36,7 @@
 .leftArrow {
     left: -12px;
 }
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1240px) {
     .leftArrow {
         left: 25px;
     }
@@ -45,7 +45,7 @@
 .rightArrow {
     right: -12px;
 }
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1240px) {
     .rightArrow {
         right: 25px;
     }

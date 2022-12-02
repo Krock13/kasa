@@ -1,11 +1,11 @@
 import { useParams } from 'react-router-dom';
 import styles from './lodging.module.css';
 import { useFetch } from '../../utils/hooks/fetch';
-import { ImageSlider } from '../../components/ImageSlider/imageSlider';
-import { Tags } from '../../components/Tag/tag';
-import { Rating } from '../../components/Rating/rating';
-import { Host } from '../../components/Host/host';
-import { Collapsible } from '../../components/Collapse/collapse';
+import { ImageSlider } from '../../components/ImageSlider/ImageSlider';
+import { Tags } from '../../components/Tag/Tag';
+import { Rating } from '../../components/Rating/Rating';
+import { Host } from '../../components/Host/Host';
+import { Collapsible } from '../../components/Collapse/Collapse';
 
 export function Lodging() {
     const { data, isLoading, error } = useFetch(`../logements.json`);

@@ -1,7 +1,7 @@
 import styles from './about.module.css';
 import banner from '../../assets/banner_about.png';
 import { aboutData } from './aboutData';
-import { Collapsible } from '../../components/Collapse/collapse';
+import { Collapsible } from '../../components/Collapse/Collapse';
 
 export function About() {
     return (
