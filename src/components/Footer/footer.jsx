@@ -7,12 +7,14 @@ import vector_house_white from '../../assets/house_white.png';
 export function Footer() {
     return (
         <div className={styles.footer}>
+            {/* Logo */}
             <div className={styles.logo}>
                 <img src={vector_K_white} alt='K'></img>
                 <img className={styles.house} src={vector_house_white} alt='A'></img>
                 <img src={vector_S_white} alt='S'></img>
                 <img src={vector_A_white} alt='A'></img>
             </div>
+            {/* Copyright */}
             <span>© 2020 Kasa. All rights reserved</span>
         </div>
     );

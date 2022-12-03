@@ -1,5 +1,6 @@
 import styles from './card.module.css';
 
+// Title and picture from destructuring props of Home page
 export function Card({ title, picture }) {
     return (
         <div className={styles.card}>

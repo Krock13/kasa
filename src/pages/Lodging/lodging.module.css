@@ -13,7 +13,7 @@
     width: 0;
 }
 
-.loadgingContainer {
+.LodgingContainer {
     position: relative;
     width: 90%;
     height: 100%;
@@ -22,7 +22,7 @@
     min-height: calc(100vh - 194px);
 }
 @media only screen and (min-width: 1240px) {
-    .loadgingContainer {
+    .LodgingContainer {
         margin: -6px 5%;
         max-width: 1240px;
         margin-left: auto;

@@ -8,14 +8,17 @@ import { Host } from '../../components/Host/Host';
 import { Collapsible } from '../../components/Collapse/Collapse';
 
 export function Lodging() {
+    // Using the hook to fetch. Take as argument the address of the file or the future API.
     const { data, isLoading, error } = useFetch(`../logements.json`);
     const { id } = useParams();
     const element = data?.find(element => element.id === id);
 
+    // Catch errors from useFetch
     if (error) {
         return <span>Oups il y a eu un problème</span>;
     }
 
+    // Destructuring props of each elements
     if (!isLoading) {
         const {
             pictures,
@@ -29,7 +32,7 @@ export function Lodging() {
         } = element;
 
         return (
-            <div className={styles.loadgingContainer}>
+            <div className={styles.LodgingContainer}>
                 <ImageSlider slides={pictures} />
                 <h2 className={styles.title}>{title}</h2>
                 <h3 className={styles.location}>{location}</h3>
