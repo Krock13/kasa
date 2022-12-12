@@ -32,7 +32,7 @@ export function Lodging() {
         } = element;
 
         return (
-            <div className={styles.LodgingContainer}>
+            <div className={styles.lodgingContainer}>
                 <ImageSlider slides={pictures} />
                 <h2 className={styles.title}>{title}</h2>
                 <h3 className={styles.location}>{location}</h3>
@@ -42,8 +42,8 @@ export function Lodging() {
                     <Host host={host} />
                 </div>
                 <div className={styles.collapsideContainers}>
-                    <Collapsible title='Description' content={description} />
-                    <Collapsible title='Équipements' content={equipments} />
+                    <Collapsible styleCollapse={true} title='Description' content={description} />
+                    <Collapsible styleCollapse={true} title='Équipements' content={equipments} />
                 </div>
             </div>
         );

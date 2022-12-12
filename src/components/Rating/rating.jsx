@@ -15,14 +15,14 @@ export const Rating = ({ rating }) => {
                     <img
                         key={star.toString()}
                         src={red_star}
-                        alt=''
+                        alt='red_star'
                         className={styles.rating}
                     />
                 ) : (
                     <img
                         key={star.toString()}
                         src={grey_star}
-                        alt=''
+                        alt='grey_star'
                         className={styles.rating}
                     />
                 ),

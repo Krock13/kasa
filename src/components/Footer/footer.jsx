@@ -1,4 +1,5 @@
 import styles from './footer.module.css';
+
 import vector_A_white from '../../assets/vector_A_white.png';
 import vector_K_white from '../../assets/vector_K_white.png';
 import vector_S_white from '../../assets/vector_S_white.png';

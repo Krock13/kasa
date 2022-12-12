@@ -5,7 +5,7 @@ import down_arrow from '../../assets/down_arrow.png';
 import up_arrow from '../../assets/up_arrow.png';
 
 // Title and content from destructuring props of Lodging page or About page
-export const Collapsible = ({ title, content }) => {
+export const Collapsible = ({ title, content, styleCollapse }) => {
     const [open, setOpen] = useState(false);
     // Reverse open/close
     const toggle = () => {
@@ -15,28 +15,28 @@ export const Collapsible = ({ title, content }) => {
     return (
         <div className={styles.collapse}>
             {/* Button to open/close the collapse */}
-            <button onClick={toggle} className={styles.button}>
+            <button onClick={toggle} className={styleCollapse ? styles.button : styles.buttonAbout}>
                 {title}
                 {open ? (
-                    <img src={up_arrow} alt='' className={styles.arrow} />
+                    <img src={up_arrow} alt='up_arrow' className={styles.arrow} />
                 ) : (
-                    <img src={down_arrow} alt='' className={styles.arrow} />
+                    <img src={down_arrow} alt='down_arrow' className={styles.arrow} />
                 )}
             </button>
             {/* Content of the collapse */}
             {open && (
-                <div
-                    className={open ? styles.contentShow : styles.contentParent}
-                >
+                <div className={styleCollapse ? styles.contentShow : styles.contentShowAbout}>
                     {/* Makes a difference if the content is a array or a paragraph */}
                     {Array.isArray(content) ? (
-                        <ul className={styles.content}>
+                        <ul className={styleCollapse ? styles.content : styles.contentAbout}>
                             {content.map((equipments, index) => (
                                 <li key={index}>{equipments}</li>
                             ))}
                         </ul>
                     ) : (
-                        <p className={styles.content}>{content}</p>
+                        <p className={styleCollapse ? styles.content : styles.contentAbout}>
+                            {content}
+                        </p>
                     )}
                 </div>
             )}

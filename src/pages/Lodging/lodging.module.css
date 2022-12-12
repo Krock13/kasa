@@ -1,19 +1,4 @@
-.loaderWrapper {
-    display: flex;
-    justify-content: center;
-}
-
-.loader {
-    padding: 10px;
-    border: 6px solid #5843e4;
-    border-bottom-color: transparent;
-    border-radius: 22px;
-    animation: rotate 1s infinite linear;
-    height: 0;
-    width: 0;
-}
-
-.LodgingContainer {
+.lodgingContainer {
     position: relative;
     width: 90%;
     height: 100%;
@@ -22,7 +7,7 @@
     min-height: calc(100vh - 194px);
 }
 @media only screen and (min-width: 1240px) {
-    .LodgingContainer {
+    .lodgingContainer {
         margin: -6px 5%;
         max-width: 1240px;
         margin-left: auto;
@@ -70,11 +55,11 @@
         flex-direction: column-reverse;
         align-items: flex-end;
         right: 0px;
-        top: 436px;
+        top: 430px;
     }
 }
 
-@media only screen and (min-width: 1240px) {
+@media only screen and (min-width: 1440px) {
     .collapsideContainers {
         display: flex;
         flex-direction: row;

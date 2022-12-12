@@ -1,35 +1,10 @@
 import { useState } from 'react';
 import styles from './imageSlider.module.css';
 
-import left_arrow from '../../assets/left_arrow.png';
-import right_arrow from '../../assets/right_arrow.png';
+import { ShowArrows } from '../../components/ShowArrows/ShowArrows';
 
 // Slides from destructuring props of Lodging page
 export const ImageSlider = ({ slides }) => {
-    // Function to display slider navigation arrows unless there is only one image
-    function ShowArrows() {
-        if (slides.length <= 1) {
-            return null;
-        }
-
-        return (
-            <div>
-                <img
-                    src={left_arrow}
-                    alt='leftArrow'
-                    onClick={goToPrevious}
-                    className={styles.leftArrow}
-                ></img>
-                <img
-                    src={right_arrow}
-                    alt='rightArrow'
-                    onClick={goToNext}
-                    className={styles.rightArrow}
-                ></img>
-            </div>
-        );
-    }
-
     // Using useState for the current image
     const [currentIndex, setCurrentIndex] = useState(0);
     // Previous image function
@@ -53,7 +28,11 @@ export const ImageSlider = ({ slides }) => {
 
     return (
         <div className={styles.imageSliderContainer}>
-            <ShowArrows />
+            <ShowArrows
+                goToPrevious={goToPrevious}
+                goToNext={goToNext}
+                slides={slides}
+            />
             <img src={photo} alt='img' className={styles.pictures}></img>
             <div className={styles.rectangle}></div>
             <div>

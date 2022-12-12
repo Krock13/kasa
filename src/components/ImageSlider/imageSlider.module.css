@@ -8,46 +8,16 @@
     background: #ff6060;
 }
 @media only screen and (min-width: 1240px) {
-    .imageSliderContainer {
+    .imageSliderContainer {        
+        height: 415px;
+        border-radius: 25px;
+    }
+}
+@media only screen and (min-width: 1440px) {
+    .imageSliderContainer {        
         width: 1240px;
         height: 415px;
-    }
-}
-
-.leftArrow,
-.rightArrow {
-    position: absolute;
-    top: 38%;
-    transform: translate(0, -50%);
-    font-size: 45px;
-    color: blue;
-    z-index: 1;
-    cursor: pointer;
-    scale: 25%;
-}
-@media only screen and (min-width: 1240px) {
-    .leftArrow,
-    .rightArrow {
-        scale: 100%;
-        top: 50%;
-    }
-}
-
-.leftArrow {
-    left: -12px;
-}
-@media only screen and (min-width: 1240px) {
-    .leftArrow {
-        left: 25px;
-    }
-}
-
-.rightArrow {
-    right: -12px;
-}
-@media only screen and (min-width: 1240px) {
-    .rightArrow {
-        right: 25px;
+        border-radius: 25px;
     }
 }
 
