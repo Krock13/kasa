@@ -16,7 +16,7 @@
 }
 
 .title {
-    color: #ff6060;
+    color: var(--primary-color);
     font-size: 18px;
     font-weight: 500;
     margin-top: -10px;
@@ -30,7 +30,7 @@
 }
 
 .location {
-    color: #ff6060;
+    color: var(--primary-color);
     font-size: 14px;
     margin-top: -7px;
     font-weight: 500;

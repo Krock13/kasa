@@ -30,7 +30,7 @@
 }
 
 .footer span {
-    color: #fff;
+    color: var(--tertiary-color);
     font-size: 12px;
 }
 @media only screen and (min-width: 1240px) {

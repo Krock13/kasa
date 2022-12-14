@@ -10,9 +10,9 @@
 }
 
 .lodgingTags {
-    background-color: #ff6060;
+    background-color: var(--primary-color);
     border-radius: 7px;
-    color: #ffffff;
+    color: var(--secondary-color);
     padding: 0px 10px;
     margin-right: 10px;
     margin-bottom: 8px;

@@ -1,6 +1,6 @@
 .errorContainer {
     padding: 0 5%;
-    color: #ff6060;
+    color: var(--primary-color);
     text-align: center;
     min-height: calc(100vh - 254px);
 }
@@ -41,7 +41,7 @@
 .redirection {
     font-size: 14px;
     font-weight: 500;
-    color: #ff6060;
+    color: var(--primary-color);
 }
 @media only screen and (min-width: 1240px) {
     .redirection {
