@@ -42,8 +42,8 @@ export function Lodging() {
                     <Host host={host} />
                 </div>
                 <div className={styles.collapsideContainers}>
-                    <Collapsible styleCollapse={true} title='Description' content={description} />
-                    <Collapsible styleCollapse={true} title='Équipements' content={equipments} />
+                    <Collapsible styleLodging={true} title='Description' content={description} />
+                    <Collapsible styleLodging={true} title='Équipements' content={equipments} />
                 </div>
             </div>
         );
