@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
 import styles from './lodging.module.css';
 import { useFetch } from '../../utils/hooks/fetch';
 import { ImageSlider } from '../../components/ImageSlider/ImageSlider';
@@ -14,8 +14,8 @@ export function Lodging() {
     const element = data?.find(element => element.id === id);
 
     // Catch errors from useFetch
-    if (error) {
-        return <span>Oups il y a eu un problème</span>;
+    if (error || !isLoading & !element) {
+        return <Navigate to='404' />;
     }
 
     // Destructuring props of each elements
@@ -42,8 +42,16 @@ export function Lodging() {
                     <Host host={host} />
                 </div>
                 <div className={styles.collapsideContainers}>
-                    <Collapsible styleLodging={true} title='Description' content={description} />
-                    <Collapsible styleLodging={true} title='Équipements' content={equipments} />
+                    <Collapsible
+                        styleLodging={true}
+                        title='Description'
+                        content={description}
+                    />
+                    <Collapsible
+                        styleLodging={true}
+                        title='Équipements'
+                        content={equipments}
+                    />
                 </div>
             </div>
         );

@@ -7,8 +7,6 @@ export function useFetch(url) {
     const [error, setError] = useState(false);
 
     useEffect(() => {
-        // Return empty if url parameter is empty
-        if (!url) return;
         // Set a loading indicator to true before fetching
         setLoading(true);
         // Declaration of an asynchronous function (fetch, parse then save in the state data) + error handling
