@@ -1,4 +1,4 @@
-import { useParams, Navigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import styles from './lodging.module.css';
 import { useFetch } from '../../utils/hooks/fetch';
 import { ImageSlider } from '../../components/ImageSlider/ImageSlider';
@@ -12,10 +12,11 @@ export function Lodging() {
     const { data, isLoading, error } = useFetch(`../logements.json`);
     const { id } = useParams();
     const element = data?.find(element => element.id === id);
+    const navigate = useNavigate();
 
     // Catch errors from useFetch
     if (error || !isLoading & !element) {
-        return <Navigate to='404' />;
+        navigate('/404');
     }
 
     // Destructuring props of each elements
