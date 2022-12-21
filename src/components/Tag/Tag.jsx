@@ -1,9 +1,10 @@
 import styles from './tag.module.css';
 
-// Tags from destructuring props of Lodging page
+// Function to display a list of tags
 export const Tags = ({ tags }) => {
     return (
         <div className={styles.tagsContainers}>
+            {/* Map over the tags and display each one in a separate container */}
             {tags.map((tags, index) => (
                 <div key={`${tags.id}-${index}`} className={styles.lodgingTags}>
                     <span className={styles.tag}>{tags}</span>

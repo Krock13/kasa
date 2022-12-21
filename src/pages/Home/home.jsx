@@ -6,10 +6,10 @@ import styles from './home.module.css';
 import banner from '../../assets/banner.png';
 
 export function Home() {
-    // Using the hook to fetch. Take as argument the address of the file or the future API.
+    // Use the fetch hook to get data from the provided url
     const { data, error } = useFetch(`./logements.json`);
 
-    // Catch errors from useFetch
+    // If there is an error while fetching, display an error message
     if (error) {
         return <span>Oups il y a eu un problème</span>;
     }
@@ -27,6 +27,7 @@ export function Home() {
             {/* Body */}
             <section className={styles.thumb}>
                 <div className={styles.cardContainer}>
+                    {/* Map through the data array to display a card for each element */}
                     {data.map((logement, index) => (
                         <div
                             className={styles.cardCalc}

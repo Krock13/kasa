@@ -20,6 +20,7 @@ export function About() {
             {/* Body */}
             <div className={styles.collapsibleContainer}>
                 <div>
+                    {/* Display a Collapsible component for each element of aboutData */}
                     <Collapsible
                         styleLodging={false}
                         title='Fiabilité'

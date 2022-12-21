@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react';
 
-// Function to fetch a url using useEffect
+/**
+ * Custom hook to fetch a URL using useEffect.
+ * @param {string} url - The URL to fetch.
+ * @returns {Object} - An object containing the data, a boolean indicating if the data is loading, and a boolean indicating if an error occurred.
+ */
 export function useFetch(url) {
     const [data, setData] = useState([]);
     const [isLoading, setLoading] = useState(true);
@@ -19,7 +23,8 @@ export function useFetch(url) {
                 console.log(err);
                 setError(true);
             } finally {
-                setLoading(false); // Set the loading indicator to false after fetching
+                // Set the loading indicator to false after fetching
+                setLoading(false);
             }
         }
         fetchData();

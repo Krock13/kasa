@@ -8,18 +8,21 @@ import { Host } from '../../components/Host/Host';
 import { Collapsible } from '../../components/Collapse/Collapse';
 
 export function Lodging() {
-    // Using the hook to fetch. Take as argument the address of the file or the future API.
+    // Fetch data from the logements.json file.
     const { data, isLoading, error } = useFetch(`../logements.json`);
+    // Get the id from the URL params
     const { id } = useParams();
+    // Find the element with the matching id in the fetched data
     const element = data?.find(element => element.id === id);
+    // Get the navigate function from the hook
     const navigate = useNavigate();
 
-    // Catch errors from useFetch
+    // If there is an error or if the element is not found, navigate to the 404 page
     if (error || !isLoading & !element) {
         navigate('/404');
     }
 
-    // Destructuring props of each elements
+    // Destructure the props of the element
     if (!isLoading) {
         const {
             pictures,

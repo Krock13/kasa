@@ -11,9 +11,11 @@ import ScrollToTop from './utils/hooks/scrollToTop';
 
 import './utils/style/globalStyle.css';
 
+// Render the app in the root element
 ReactDOM.createRoot(document.getElementById('root')).render(
     <StrictMode>
         <Router>
+            {/* Use the custom hook to scroll to the top of the page on change */}
             <ScrollToTop />
             <Header />
             <Routes>
