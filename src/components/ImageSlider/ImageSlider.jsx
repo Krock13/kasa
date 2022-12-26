@@ -41,6 +41,8 @@ export const ImageSlider = ({ slides }) => {
             {/* Display the current slide */}
             <img src={photo} alt='img' className={styles.pictures}></img>
             <div className={styles.rectangle}></div>
+            {/* Display the current image index and the total number of images */}
+            <div className={styles.imageIndex}>{`${ currentIndex + 1 }/${ slides.length }`}</div>
             <div>
                 {slides.map((pictures, slideIndex) => {
                     return (

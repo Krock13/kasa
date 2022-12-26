@@ -8,13 +8,13 @@
     background: var(--primary-color);
 }
 @media only screen and (min-width: 1240px) {
-    .imageSliderContainer {        
+    .imageSliderContainer {
         height: 415px;
         border-radius: 25px;
     }
 }
 @media only screen and (min-width: 1440px) {
-    .imageSliderContainer {        
+    .imageSliderContainer {
         width: 1240px;
         height: 415px;
         border-radius: 25px;
@@ -37,4 +37,19 @@
     height: 100%;
     width: 100%;
     border-radius: inherit;
+}
+
+.imageIndex {
+    display: none;
+}
+@media only screen and (min-width: 1240px) {
+    .imageIndex {
+        display: block;
+        position: absolute;
+        bottom: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        font-size: 18px;
+    }
 }
